@@ -1,0 +1,226 @@
+body {
+  font-family: "Saira Condensed", sans-serif;
+  max-width: 100%;
+}
+/* header */
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+header {
+  background-color: #fff3e4;
+  padding: 0px 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 a {
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: 700;
+  color: #553d3d;
+}
+header img {
+  width: 80px;
+  position: absolute;
+  bottom: -40px;
+  right: 15%;
+  z-index: 5;
+  transform: rotate(-40deg);
+}
+.navItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navItem a {
+  color: #6b4f4f;
+  padding: 2px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 10px;
+  font-weight: 400;
+  margin-left: 3px;
+  transition: all 0.15s ease-in-out;
+}
+.navItem a:hover {
+  color: white;
+  background-color: #553d3d;
+  border-radius: 10px;
+}
+
+/* section */
+section {
+  position: relative;
+  padding: 0px 15%;
+  height: calc(100vh - 50px);
+  background: url(https://cdn.theatlantic.com/thumbor/z_sKglFzlvqh_iaJhhKcGC5DwVw=/6x533:4845x3255/976x549/media/img/mt/2019/05/GettyImages_544228848/original.jpg);
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+section img {
+  position: absolute;
+  bottom: -100px;
+  left: 70%;
+  z-index: 3;
+  width: 200px;
+  transform: rotate(60deg);
+  transition: all 0.3s ease-in-out;
+  animation: mymove 2s infinite alternate ease-in-out;
+}
+@keyframes mymove {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: -120px;
+  }
+}
+section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 50%;
+  z-index: 2;
+}
+section h2 {
+  z-index: 3;
+  position: absolute;
+  font-size: 70px;
+  margin-top: 40vh;
+  color: #ffffff;
+  text-shadow: 1px 0px 1px #242323, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
+    1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
+    2px 2px 0px rgba(206, 89, 55, 0);
+}
+
+/* howItWork */
+.howItWork {
+  padding: 0px 15%;
+  position: relative;
+  background-color: #fff3e4;
+  color: #553d3d;
+  padding-bottom: 5%;
+}
+.howItWork h2 {
+  margin: 0;
+  padding: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+.howItWork img:first-child {
+  position: absolute;
+  z-index: 1;
+  left: 69.9%;
+  width: 200px;
+  transform: rotate(60deg);
+  animation: mymovet 2s infinite alternate ease-in-out;
+}
+@keyframes mymovet {
+  from {
+    top: -102px;
+  }
+  to {
+    top: -80px;
+  }
+}
+
+.howContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  align-items: center;
+  justify-content: center;
+}
+.howContent img {
+  width: 100%;
+  border-radius: 10px;
+}
+.howContent p {
+  font-size: 30px;
+}
+.howContent p a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 3px;
+  border: 2px solid #553d3d;
+  border-radius: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+  background-color: #553d3d;
+  transition: all 0.15s ease-in-out;
+}
+.howContent p a:hover {
+  color: #553d3d;
+  background-color: #fff3e4;
+}
+
+/* footer*/
+footer {
+  padding: 20px;
+  background-color: #553d3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer h2 {
+  color: #fff3e4;
+  text-align: center;
+}
+footer p {
+  color: #fff3e4;
+  text-align: center;
+}
+.social img {
+  width: 30px;
+  margin: 5px 10px;
+}
+.copyR {
+  display: flex;
+  justify-content: center;
+  background-color: #242323;
+  color: #fff3e4;
+  padding: 0;
+}
+
+/* Media Query*/
+@media only screen and (max-width: 600px) {
+  header {
+    padding: 0px 5%;
+  }
+  .howContent img {
+    padding: 0px 5%;
+    width: 90%;
+  }
+  section {
+    display: flex;
+    align-items: center;
+    padding: 0px 15%;
+  }
+  section h2 {
+    font-size: 50px;
+    width: 50%;
+    margin-top: 20vh;
+  }
+  section img,
+  .howItWork img:first-child {
+    display: none;
+  }
+  .howContent {
+    flex-direction: column;
+  }
+  .howContent p {
+    text-align: center;
+    font-size: 20px;
+  }
+}
