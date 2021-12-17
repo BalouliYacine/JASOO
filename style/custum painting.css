@@ -26,7 +26,7 @@ body {
 }
 .house {
   position: absolute;
-  background: url(/img/kids-colouring-pages.jpg);
+  background: url(../img/kids-colouring-pages.jpg);
   background-size: cover;
   border: 5px solid #483434;
   width: calc(100% - 550px);
@@ -38,7 +38,7 @@ body {
 }
 .trees {
   position: absolute;
-  background: url(/img/tree.jpg);
+  background: url(../img/tree.jpg);
   background-size: cover;
   border: 5px solid #483434;
   width: calc(100% - 550px);
@@ -50,7 +50,7 @@ body {
 }
 .cat {
   position: absolute;
-  background: url(/img/cat.jpg);
+  background: url(../img/cat.jpg);
   background-size: cover;
   border: 5px solid #483434;
   width: calc(100% - 550px);
